@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@700&display=swap');
+
+body {
+  margin: 0;
+  overflow: auto; /* Allow scrolling by default */
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.overlay {
+  /* Styles for the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.password-form {
+ 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, crimson, darkred); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-bottom: 1px solid #E83005; /* Border color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.content {
+  display: none;
+}
+html{
+  font-size: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  display: grid;
+  justify-content: left;
+  
+  align-items: left;
+  margin: 0;
+  background-color: #f7f7f7;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 120px;
+  padding-right: 40px;
+  background-color: #f7f7f7;
+  font-size: 15px;
+}
+/* Prevent scrolling on the body */
+.letter-section {
+  margin-top: 40px;
+  text-align: left; /* Change to left alignment */
+  padding-left: 40px; /* Add padding for left alignment */
+}
+
+.letter-section h2 {
+  color: crimson;
+  font-size: 24px;
+  text-align: center; /* Center align the heading */
+}
+.letter-section h3 {
+  color: crimson;
+  font-size: 24px;
+  
+  text-align: center; /* Center align the heading */
+}
+
+.letter-section p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: left; /* Left align the paragraph */
+}
+
+#sidebarToggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+/* Sidebar Styles */
+.sidebar {
+  width:1500px;
+  left: -1500px;
+  position: fixed;
+  margin-top: 50px;
+  top: 0;
+  height: 100%;
+  background-color: rgb(31,30 ,30 );
+  color: white;
+  transition: left 0.7s ease;
+  z-index: 1000;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+.cta{
+  width: 300px;
+  margin-left: 450px;
+  display: flex; /* Use flexbox for centering */
+  padding: 10px 30px;
+  margin-top: 10vh;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.cta:hover{
+  display: inline-block;
+  color: white;
+  background-color: crimson;
+}
+.cta2{
+  width: 100px;
+  
+  display: flex; /* Use flexbox for centering */
+  padding: 10px 30px;
+  margin-top: 10vh;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+
+.video-title{
+  margin: 20px auto; /* Center the button horizontally and add spacing */
+  padding: 10px 150px; /* Add padding for better button appearance */
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  color: crimson;
+  padding-bottom: 20px;
+ 
+}
+/* Style the form container */
+#loveForm {
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid crimson;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: .3s ease;
+  transition-property: background-color, color;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text within the form */
+}
+#loveForm p{
+  margin: 20px auto; /* Center the button horizontally and add spacing */
+  padding: 10px 260px; /* Add padding for better button appearance */
+  font-size: 2rem; /* Adjust the font size as needed */
+}
+/* Style the radio buttons and labels */
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: white;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+  margin: 20px auto; /* Center the button horizontally and add spacing */
+  padding: 10px 30px; /* Add padding for better button appearance */
+ 
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+button:hover{
+  color: white;
+  background-color: crimson;
+}
+
+.cta2:hover{
+ 
+  color: white;
+  background-color: crimson;
+}
+  .header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, crimson, darkred); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-bottom: 1px solid #E83005; /* Border color */
+}
+.header h1 {
+  margin: 0;
+  padding-left: 10px;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold; /* Added font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  flex-grow: 1;
+
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 20px; /* Add some padding for the 3D effect */
+  border-width: 20px; /* Adjust the border width for the 3D effect */
+  border-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.2), transparent) 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.video-container iframe {
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  border: none;
+}
+/* Add 3D border effect */
+.video-container::before,
+.video-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  pointer-events: none;
+  border-radius: 50px;
+}
+
+/* Your existing CSS styles */
+/* Your existing styles */
+
+/* Password container styles */
+.password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+/* Video container styles */
+#videoContainer {
+  display: none;
+  border-radius: 50px;
+  visibility: hidden; /* Hide and prevent space even if hidden */
+  opacity: 0; /* Hide while not visible */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.video-container .video-item .h2 .video-title{
+  color: crimson;
+  font-weight: bold; /* Add bold font-weight */
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+.letter-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.letter-section h2 {
+  color: crimson;
+  font-size: 24px;
+}
+
+.letter-section p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+@media screen and (max-width: 768px) {
+  /* Adjust video container columns for smaller screens */
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .sidebar.active {
+    left: 0; /* Show sidebar when active class is added */
+  }
+  .cta{
+    width: 70px;
+    margin-left: 130px;
+    display: flex; /* Use flexbox for centering */
+    font-size: 8px;
+
+  }
+  .header h1{
+    padding-left: 140px;
+  }
+  
+  .cta:hover{
+    display: inline-block;
+    color: white;
+    background-color: crimson;
+  }
+  #sidebarToggle {
+    font-size: 2rem;
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 5px; /* Adjust top position as needed */
+   /* Adjust right position as needed */
+    z-index: 1000; /* Place the icon above other content */
+  }
+  .sidebar {
+    position:fixed;
+    width: 100%; /* Occupy full width of the screen */
+    left: -100%; /* Hide sidebar by default */
+  }
+}

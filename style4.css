@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@700&display=swap');
+
+
+html{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7px;
+}
+a{
+  text-decoration: none;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f7f7f7;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 120px;
+  padding-right: 40px;
+  background-color: #f7f7f7;
+  font-size: 15px;
+}
+#sidebarToggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  background-color: rgb(31,30 ,30 );
+  color: white;
+  transition: left 0.7s ease;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+.sidebar {
+  width:1500px;
+  left: -1500px;
+  position: fixed;
+  margin-top: 50px;
+  top: 0;
+  height: 100%;
+  background-color: rgb(31,30 ,30 );
+  color: white;
+  transition: left 0.7s ease;
+  z-index: 1000;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+.cta{
+  width: 300px;
+  margin-left: 450px;
+  display: flex; /* Use flexbox for centering */
+  padding: 10px 30px;
+  margin-top: 10vh;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.cta:hover{
+  display: inline-block;
+  color: white;
+  background-color: crimson;
+}
+  .header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, crimson, darkred); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-bottom: 1px solid #E83005; /* Border color */
+}
+.header h1 {
+  margin: 0;
+  padding-left: 10px;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold; /* Added font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  flex-grow: 1;
+
+}
+    /* Style the video container */
+    .video-container {
+      display: grid;
+      grid-template-columns:  repeat(3, 1fr); /* Adjust column sizing */
+      gap: 50px; /* Adjust gap between grid items */
+      padding: 10px; /* Add padding to the container */
+      margin: 0 auto;
+      max-width: 100%; /* Adjust max-width */
+    }
+    .video-item:hover {
+      transform: translateY(-5px)scale(1.1);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    }
+        
+    .video-item {
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      background-color: crimson;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    
+    
+    /* Style the video player */
+    .video-title {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .text-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+.video-item:hover .text-overlay {
+  display: block;
+}
+    
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  /* Adjust video container columns for smaller screens */
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .sidebar.active {
+    left: 0; /* Show sidebar when active class is added */
+  }
+  .cta{
+    width: 70px;
+    margin-left: 130px;
+    display: flex; /* Use flexbox for centering */
+    font-size: 8px;
+
+  }
+  .header h1{
+    padding-left: 120px;
+  }
+  
+  .cta:hover{
+    display: inline-block;
+    color: white;
+    background-color: crimson;
+  }
+  #sidebarToggle {
+    font-size: 2rem;
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 5px; /* Adjust top position as needed */
+   /* Adjust right position as needed */
+    z-index: 1000; /* Place the icon above other content */
+  }
+  .sidebar {
+    position:fixed;
+    width: 100%; /* Occupy full width of the screen */
+    left: -100%; /* Hide sidebar by default */
+  }
+}

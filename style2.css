@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@700&display=swap');
+
+html{
+  font-size: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+body {
+  padding-top: 60px;
+  padding-left: 120px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: linear-gradient(90deg, crimson, darkred); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-bottom: 1px solid #E83005; /* Border color */
+}
+.header h1 {
+  margin: 0;
+  padding-left: 10px;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold; /* Added font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  flex-grow: 1;
+
+}
+.header h1 span {
+  color: white; 
+}
+
+.header a {
+  margin: 0;
+  padding-right: 10px; 
+  color: white;
+  text-align: right;
+  font-size: 20px;
+  flex-grow: 1;
+}
+#sidebarToggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* End header section */
+/* Sidebar Styles */
+.sidebar {
+  width:1500px;
+  left: -1500px;
+  position: fixed;
+  margin-top: 50px;
+  top: 0;
+  height: 100%;
+  background-color: rgb(31,30 ,30 );
+  color: white;
+  transition: left 0.7s ease;
+  z-index: 1000;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+/* Photo container */
+.photo-container {
+  margin: 10px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta{
+  width: 300px;
+  margin-left: 450px;
+  display: flex; /* Use flexbox for centering */
+  padding: 10px 30px;
+  margin-top: 10vh;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+ 
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.cta:hover{
+  display: inline-block;
+  color: white;
+  background-color: crimson;
+}
+
+.photo-container:hover {
+  transform: translateY(-5px)scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.photo-container:hover .photo {
+  filter: brightness(70%);
+}
+
+.text-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+.text {
+  margin-top: 90px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text1 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text2 {
+  margin-top: 90px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}.text3 {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text4 {
+  margin-top: 90px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text5 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text6 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text7 {
+  margin-top: 90px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text8 {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+.text9 {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+
+.photo-container:hover .text-overlay {
+  display: block;
+}
+/* End photo container */
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide */
+  body {
+    grid-template-columns: 1fr; /* Display one column on smaller screens */
+    padding-left: 20px; /* Adjust the left padding */
+    padding-top: 100px; /* Increase top padding for better space */
+  
+  }
+
+  .header h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    
+      padding-left: 120px;
+  
+    
+  }
+
+  .header a {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+  .container {
+    padding-left: 40px; /* Adjust padding for smaller screens */
+  }
+
+
+  .photo-container {
+    width: 100%; /* Full width photo container on small screens */
+    margin: 10px 0; /* Adjust margins for smaller screens */
+  }
+
+  .text-overlay {
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+
+  .sidebar.active {
+    left: 0; /* Show sidebar when active class is added */
+  }
+  .cta{
+    width: 70px;
+    margin-left: 130px;
+    display: flex; /* Use flexbox for centering */
+    font-size: 8px;
+
+  }
+  .cta:hover{
+    display: inline-block;
+    color: white;
+    background-color: crimson;
+  }
+  #sidebarToggle {
+    font-size: 2rem;
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 5px; /* Adjust top position as needed */
+   /* Adjust right position as needed */
+    z-index: 1000; /* Place the icon above other content */
+  }
+  .sidebar {
+    position:fixed;
+    width: 100%; /* Occupy full width of the screen */
+    left: -100%; /* Hide sidebar by default */
+  }
+}

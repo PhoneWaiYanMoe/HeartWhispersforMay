@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@700&display=swap');
+
+html{
+  font-size: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  background-image: url(image/aad224556dd2404393f0cdd04a8bdaca.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f7f7f7;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+}
+#sidebarToggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.7s ease;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+ 
+  background: linear-gradient(40deg, crimson, rgb(181, 0, 0)); /* Gradient background */
+  
+}
+.header h1 {
+  margin: 0;
+  padding-left: 10px;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold; /* Added font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  flex-grow: 1;
+  padding-left: 40px;
+}
+.header h1 span {
+  color: white; 
+}
+
+.header a {
+  margin: 0;
+  padding-right: 10px; 
+  color: white;
+  text-align: right;
+  font-size: 20px;
+  flex-grow: 1;
+}
+/* End header section */
+
+.envelope-container {
+  display: flex;
+
+}
+.envelope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 150px;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.envelope {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  background-color: #ff5050;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transitions */
+  
+}
+.envelope-content.scrollable {
+  max-height: 1000px; /* Adjust as needed */
+  opacity: 1;
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  /* Other styles */
+}
+
+.envelope-content .envelope-message span{
+  font-weight: bold;
+}
+
+.envelope:hover {
+  transform: translateY(-5px); /* Lift the envelope on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  background-color: #ff7c7c; /* Change background color on hover */
+}
+
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent; /* Adjusted width */
+  border-right: 100px solid transparent; /* Adjusted width */
+  border-top: 50px solid #ffffff;
+  z-index: 1;
+  transition: opacity 0.5s, transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+.envelope.opened #flap1 {
+  opacity: 0; 
+}
+.envelope.opened {
+  background-color: #ffffff; /* Change the background color to white when opened */
+  transform: translateY(-5px) scale(1.5);
+}
+
+.envelope.opened #flap1 {
+  opacity: 0; /* Make the flap disappear when opened */
+}
+
+.envelope-content {
+  position: relative;
+  z-index: 3;
+  padding: 10px;
+  max-height: 100px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  margin: auto; /* Add this line to center the content horizontally */
+  display: flex; /* Add this line to enable flexbox behavior */
+  flex-direction: column; /* Add this line to align content vertically */
+  transition: max-height 0.7s ease, opacity 0.7s ease;
+}
+
+
+.envelope.opened .envelope-content {
+  max-height: 400px;
+  opacity: 1;
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}.sidebar {
+  width:1500px;
+  left: -1500px;
+  position: fixed;
+  margin-top: 50px;
+  top: 0;
+  height: 100%;
+  background-color: rgb(31,30 ,30 );
+  color: white;
+  transition: left 0.7s ease;
+  z-index: 1000;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+.cta{
+  width: 300px;
+  margin-left: 450px;
+  display: flex; /* Use flexbox for centering */
+  padding: 10px 30px;
+  margin-top: 10vh;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.cta:hover{
+  display: inline-block;
+  color: white;
+  background-color: crimson;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide */
+  body {
+    padding-left: 20px; /* Adjust the left padding */
+    padding-top: 150px; /* Increase top padding for better space */
+    padding-bottom: 40px; /* Adjust bottom padding */
+ /* Remove background image on smaller screens */
+  }
+  .header h1{
+    padding-left: 120px;
+  }
+  
+  /* Make the envelope content scrollable */
+  .envelope-message.scrollable {
+    font-size: 4px;
+    max-height: 14dvw; /* Adjust as needed */
+    opacity: 1;
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    /* Other styles */
+  }
+  .header h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .header a {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .envelope-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns for smaller screens */
+    grid-gap: 80px; /* Reduce gap for smaller screens */
+    margin: 20px 0; /* Adjust margin for smaller screens */
+  }
+
+  .envelope {
+    width: 150px; /* Adjust envelope width for smaller screens */
+    height: 90px; /* Adjust envelope height for smaller screens */
+  }
+
+  .envelope-content {
+    max-height: 200px; /* Adjust max height for smaller screens */
+  }
+  .envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent; /* Adjusted width */
+    border-right: 75px solid transparent; /* Adjusted width */
+    border-top: 25px solid #ffffff;
+    z-index: 1;
+    transition: opacity 0.5s, transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+  }  
+
+  .sidebar.active {
+    left: 0; /* Show sidebar when active class is added */
+  }
+  .cta{
+    width: 70px;
+    margin-left: 130px;
+    display: flex; /* Use flexbox for centering */
+    font-size: 8px;
+
+  }
+  .cta:hover{
+    display: inline-block;
+    color: white;
+    background-color: crimson;
+  }
+  #sidebarToggle {
+    font-size: 2rem;
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 5px; /* Adjust top position as needed */
+   /* Adjust right position as needed */
+    z-index: 1000; /* Place the icon above other content */
+  }
+  .sidebar {
+    position:fixed;
+    width: 100%; /* Occupy full width of the screen */
+    left: -100%; /* Hide sidebar by default */
+  }
+}
+
+

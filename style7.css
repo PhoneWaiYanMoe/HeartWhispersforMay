@@ -1,0 +1,214 @@
+/* Your existing styles */
+html{
+  font-size: 7px;
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+body {
+  padding-top: 60px;
+  padding-left: 120px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+}
+
+.content {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sidebar-content {
+  max-height: 100vh; /* Set the maximum height to the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-top: 50px; /* Adjust padding to make space for the fixed header */
+}
+
+.about-me-section,
+.contact-info-section,
+.special-thanks-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: linear-gradient(90deg, crimson, darkred); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-bottom: 1px solid #E83005; /* Border color */
+}
+.header h1 {
+  margin: 0;
+  padding-left: 10px;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold; /* Added font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  flex-grow: 1;
+
+}
+.header h1 span {
+  color: white; 
+}
+
+.header a {
+  margin: 0;
+  padding-right: 10px; 
+  color: white;
+  text-align: right;
+  font-size: 20px;
+  flex-grow: 1;
+}
+#sidebarToggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* End header section */
+/* Sidebar Styles */
+.sidebar {
+  width:1500px;
+  left: -1500px;
+  position: fixed;
+  margin-top: 50px;
+  top: 0;
+  height: 100%;
+  background-color: rgb(31,30 ,30 );
+  color: white;
+  transition: left 0.7s ease;
+  z-index: 1000;
+}
+.sidebar.active {
+  left: 0; /* Show the sidebar when active class is added */
+}
+.cta{
+  width: 300px;
+  margin-left: 450px;
+  display: flex; /* Use flexbox for centering */
+  padding: 10px 30px;
+  margin-top: 10vh;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+ 
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.cta:hover{
+  display: inline-block;
+  color: white;
+  background-color: crimson;
+}
+
+.about-me-section h2,
+.contact-info-section h2,
+.special-thanks-section h2 {
+  color: crimson;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-me-section p,
+.contact-info-section p,
+.special-thanks-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Smooth hover effect */
+.about-me-section:hover,
+.contact-info-section:hover,
+.special-thanks-section:hover {
+  transform: scale(1.02);
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .sidebar.active {
+    left: 0; /* Show sidebar when active class is added */
+  }
+  .cta{
+    width: 60px;
+    margin-left: 160px;
+    display: flex; /* Use flexbox for centering */
+    font-size: 8px;
+
+  }
+  .cta:hover{
+    display: inline-block;
+    color: white;
+    background-color: crimson;
+  }
+  .header h1{
+    padding-left: 120px;
+  }
+  
+  #sidebarToggle {
+    font-size: 2rem;
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 5px; /* Adjust top position as needed */
+   /* Adjust right position as needed */
+    z-index: 1000; /* Place the icon above other content */
+  }
+  .sidebar {
+    position:fixed;
+    width: 100%; /* Occupy full width of the screen */
+    left: -100%; /* Hide sidebar by default */
+  }
+  .header h1{
+    margin-left: 20px;
+    font-size: 2rem;
+}
+/* Existing styles for the sidebar */
+.sidebar {
+  /* Your existing styles */
+ 
+  overflow-y: hidden; /* Hide vertical scrollbar initially */
+}
+
+.sidebar-content {
+   /* Set maximum height to the viewport height */
+   /* Enable vertical scrolling when content exceeds height */
+  padding-top: 0px; /* Adjust padding to make space for the fixed header */
+}
+
+/* Rest of your existing styles */
+.content { 
+  margin-right: 60px;
+}
+
+
+}
